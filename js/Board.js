@@ -24,12 +24,12 @@ class Board {
   }
 
   /** 
-   * Renders the board into the DOM
+   * Renders the associated SVG spaces for all game spaces into the DOM
    */
   drawHTMLBoard() {
-    for (let x = 0; x < this.columns; x++) {
-      for (let y = 0; y < this.rows; y++) {
-        this.spaces[x][y].drawSVGSpace() 
+    for (let column of this.spaces) {
+      for (let space of column) {
+        space.drawSVGSpace() 
       }
     }
   }
