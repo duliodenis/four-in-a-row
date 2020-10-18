@@ -14,4 +14,11 @@ class Game {
     let player2 = new Player("Player Two", 2, '#e59a13', false)
     return [player1, player2]
   }
+
+  /* 
+   * Gets game ready for play
+   */
+  startGame() {
+
+  }
 }
