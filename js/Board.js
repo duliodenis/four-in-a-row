@@ -3,6 +3,7 @@ class Board {
     this.rows = 6
     this.columns = 7
     this.spaces = this.createSpaces()
+    this.drawHTMLBoard()
   }
 
   /** 
@@ -20,5 +21,16 @@ class Board {
       spaces.push(column)
     }
     return spaces
+  }
+
+  /** 
+   * Renders the board into the DOM
+   */
+  drawHTMLBoard() {
+    for (let x = 0; x < this.columns; x++) {
+      for (let y = 0; y < this.rows; y++) {
+        this.spaces[x][y].drawSVGSpace() 
+      }
+    }
   }
 }
