@@ -23,4 +23,20 @@ class Player {
     }
     return tokens
   }
+
+  /** 
+   * Getter for unused tokens returns tokens which haven't been played yet
+   * @returns {Array} array of unused tokens
+   */
+  get unusedTokens() {
+    return this.tokens.filter(token => !token.active)
+  }
+
+  /** 
+  * Next Active Token getter method returns the first inactive token found
+  * @returns {Object} first token object in the array of unused tokens
+  */
+  get activeToken() {
+    return this.unusedTokens[0]
+  }
 }
