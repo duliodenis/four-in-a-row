@@ -31,4 +31,22 @@ class Game {
     this.activePlayer.activeToken.drawHTMLToken()
     this.ready = true
   }
+
+  /**
+   * Handle Keyboard Actions
+   * @param {Object} e - keydown event object
+   */
+  handleKeydown(e) {
+    if (this.ready) {
+      if (e.key === 'ArrowLeft') { 
+        console.log('MOVE LEFT')
+      }
+      else if (e.key === 'ArrowRight') { 
+        console.log('MOVE RIGHT')
+      }
+      else if (e.key === 'ArrowDown') {
+        console.log('PLAY TOKEN')
+      }
+    }
+  }
 }

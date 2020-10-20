@@ -10,3 +10,10 @@ document.getElementById('begin-game').addEventListener('click', function(){
   this.style.display = 'none'
   document.getElementById('play-area').style.opacity = '1'
 }) 
+
+/**
+ * Listen for keydown and invoke the game object's handleKeydown method
+ */
+document.addEventListener('keydown', function(event) {
+  game.handleKeydown(event)
+})
